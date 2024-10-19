@@ -917,8 +917,6 @@ button.btn:hover {
     }
     .home-img img 
     {
-        height: auto;
-        border-radius: 5px;
         width: 90%; /* Scale the image to 80% of the container */
     }
     .home-img::before
@@ -1054,8 +1052,6 @@ button.btn:hover {
     }
     .home-img img 
     {
-        height: auto;
-        border-radius: 5px;
         width: 90%; /* Scale the image to 80% of the container */
     }
     .home-img::before
