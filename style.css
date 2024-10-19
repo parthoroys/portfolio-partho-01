@@ -310,11 +310,15 @@ ul
     min-height: 100vh;
     display: flex;
     color: var(--text-black-900);
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
 }
 .home .home-info
 {
     flex: 0 0 60%;
     max-width: 60%;
+    text-align: center;
 }
 .home .home-img
 {
@@ -322,6 +326,8 @@ ul
     max-width: 40%;
     text-align: center;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 h3.hello
 {
@@ -369,14 +375,15 @@ h3.my-profession
     height: 80px;
     border-top: 12px solid var(--skin-color);
     border-left: 12px solid var(--skin-color);
-    top: -35px;
-    left: 20px;
+    top: 9px;
+    left: 21px;
 }
 .home .home-img img
 {
     height: 400px;
     margin: auto;
     border-radius: 5px;
+    max-width: 100%;
 }
 /*==== About Section ===== */
 .about .about-content
@@ -883,6 +890,280 @@ button.btn:hover {
     {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+}
+@media (max-width :375px)
+{
+    .contact .contact-form .col-6
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    /* Reduce padding for small screens */
+    .home 
+    {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    /* Reorder the home-img to appear before the paragraph */
+    .home-img 
+    {
+      order: 1; /* This places the image before the text */
+      margin-bottom: 10px; /* Add some space after the image */
+    }
+    .home-img img 
+    {
+        height: auto;
+        border-radius: 5px;
+        width: 90%; /* Scale the image to 80% of the container */
+    }
+    .home-img::before
+    {
+        width: 55px;
+        height: 55px;
+        top: 223px;
+        left: -10px;
+        border-top: 10px solid var(--skin-color);
+        border-left: 10px solid var(--skin-color);
+        margin: inherit;
+        position: absolute
+    }
+    .home-img::after
+    {
+        width: 55px;
+        height: 55px;
+        bottom: 222px;
+        right: 4px;
+        border-bottom: 10px solid var(--skin-color);
+        border-right: 10px solid var(--skin-color);
+        margin: inherit;
+        position: absolute
+    }
+  
+    /* Adjust heading font sizes */
+    .hello 
+    {
+      font-size: 18px;
+    }
+    
+    .name 
+    {
+      display: block;
+      font-size: 22px;
+    }
+    
+    .my-profession 
+    {
+      font-size: 16px;
+    }
+  
+    /* Adjust paragraph font size */
+    .home-info p 
+    {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  
+    /* Adjust button styling */
+    .btn 
+    {
+      font-size: 14px;
+      padding: 10px 20px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  
+    /* Ensure the image fits well */
+    .home-img 
+    {
+      width: 100%; /* Image takes full width on small screens */
+    }
+    /* Adjust padding for all sections */
+    .padd-15 
+    {
+      padding: 5px;
+    }
+    .about .about-content .personal-info .info-item p
+    {
+        padding: 15px 25px;
+    }
+    .contact .contact-info-item
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .contact-buttonss
+    {
+        display: grid;
+        justify-content: flex-start;
+        margin-bottom: 36px;
+        align-content: baseline;
+        justify-items: normal;
+        align-items: flex-start;
+    }
+    .contact-buttonss a
+    {
+        margin-left: 72px;
+        padding: 10px 9px;
+        border-radius: 20px;
+    }
+    .contact-buttonss .telegram-button 
+    {
+        margin-top: 16px;
+    }
+    .contact-buttonss .whatsapp-button
+    {
+        margin-top: 5px;
+    }
+    .contact .contact-form .col-6
+    {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+}
+@media (max-width :520px)
+{
+    .contact .contact-form .col-6
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    /* Reduce padding for small screens */
+    .home 
+    {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    /* Reorder the home-img to appear before the paragraph */
+    .home-img 
+    {
+      order: 1; /* This places the image before the text */
+      margin-bottom: 10px; /* Add some space after the image */
+    }
+    .home-img img 
+    {
+        height: auto;
+        border-radius: 5px;
+        width: 90%; /* Scale the image to 80% of the container */
+    }
+    .home-img::before
+    {
+        width: 55px;
+        height: 55px;
+        top: 223px;
+        left: -10px;
+        border-top: 10px solid var(--skin-color);
+        border-left: 10px solid var(--skin-color);
+        margin: inherit;
+        position: absolute
+    }
+    .home-img::after
+    {
+        width: 55px;
+        height: 55px;
+        bottom: 222px;
+        right: 4px;
+        border-bottom: 10px solid var(--skin-color);
+        border-right: 10px solid var(--skin-color);
+        margin: inherit;
+        position: absolute
+    }
+  
+    /* Adjust heading font sizes */
+    .hello 
+    {
+      font-size: 18px;
+    }
+    
+    .name 
+    {
+      display: block;
+      font-size: 22px;
+    }
+    
+    .my-profession 
+    {
+      font-size: 16px;
+    }
+  
+    /* Adjust paragraph font size */
+    .home-info p 
+    {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  
+    /* Adjust button styling */
+    .btn 
+    {
+      font-size: 14px;
+      padding: 10px 20px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+  
+    /* Ensure the image fits well */
+    .home-img 
+    {
+      width: 100%; /* Image takes full width on small screens */
+    }
+    /* Adjust padding for all sections */
+    .padd-15 
+    {
+      padding: 5px;
+    }
+    .about .about-content .personal-info .info-item p
+    {
+        padding: 15px 25px;
+    }
+    .contact .contact-info-item
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .contact-buttonss
+    {
+        display: grid;
+        justify-content: flex-start;
+        margin-bottom: 36px;
+        align-content: baseline;
+        justify-items: normal;
+        align-items: flex-start;
+    }
+    .contact-buttonss a
+    {
+        margin-left: 72px;
+        padding: 10px 9px;
+        border-radius: 20px;
+    }
+    .contact-buttonss .telegram-button 
+    {
+        margin-top: 16px;
+    }
+    .contact-buttonss .whatsapp-button
+    {
+        margin-top: 5px;
+    }
+    .contact .contact-form .col-6
+    {
+        max-width: 100%;
+        flex: 0 0 100%;
     }
 
 }
