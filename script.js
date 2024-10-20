@@ -133,11 +133,11 @@ const nav = document.querySelector(".nav"),
                     return;
                 }
                 if (!isValidSubject(subject)) {
-                    displayFeedback('Subject must contain at least 3 valid words.', 'red');
+                    displayFeedback('Subject must contain at least 01 valid words.', 'red');
                     return;
                 }
                 if (!isValidMessage(message)) {
-                    displayFeedback('Message must contain at least 10 valid words or one complete sentence.', 'red');
+                    displayFeedback('Message must contain at least 03 valid words or one complete sentence.', 'red');
                     return;
                 }
             
@@ -215,6 +215,32 @@ const nav = document.querySelector(".nav"),
                 messageElement.textContent = message;
                 feedbackDiv.style.color = color;
             }
+
+// List of valid country names
+const validCountries = [
+    "United States", "Canada", "United Kingdom", "Germany", "France", "India", "Australia", "Brazil", "Japan", "China", "Mexico", "Bangladesh","Iran","Sri Lanka"    // Add more countries as needed
+];
+
+function isValidAddress(address) {
+    // Trim the input and check if it's not empty
+    if (address.trim() === "") {
+        return false; // Address is empty
+    }
+    
+    // Split the address into parts (assuming address includes the country)
+    const addressParts = address.split(",");
+    
+    // Check if the last part (country name) is valid
+    const country = addressParts[addressParts.length - 1].trim();
+    
+    // Check if the country exists in the validCountries array
+    if (!validCountries.includes(country)) {
+        return false; // Invalid country name
+    }
+    
+    return true; // Address is valid
+}
+
             
             
             
